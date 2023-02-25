@@ -1,4 +1,6 @@
 function updateSettings() {
+    console.log("HI");
+
     // Get the selects
     var font = document.getElementById("font-select");
     var fontSize = document.getElementById("fontSize-select");
