@@ -8,3 +8,7 @@ function screenshot() {
 function wholePage() {
     //send whole document
 }
+
+chrome.tabs.captureVisibleTab(null, {}, function (image) {
+   // You can add that image HTML5 canvas, or Element.
+});
