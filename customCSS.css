@@ -3,14 +3,22 @@ body {
 }
 
 h1 {
+    font-family: 'Lexend Deca';
     text-align: center;
     font-size: 30px;
 }
 
 h2 {
+    font-family: 'Lexend Deca';
     font-size: 20px;
 }
 
 p {
+    font-family: 'Lexend Deca';
     font-size: 15px;
+}
+
+#settingsButton {
+    display: flex;
+    flex-direction: row;
 }
