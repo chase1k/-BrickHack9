@@ -11,6 +11,7 @@ function ImgToText(){
     console.log(text);
     })
 
+    return "text";
 }
 
 ImgToText();
