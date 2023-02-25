@@ -1,5 +1,5 @@
 // import Tesseract from 'tesseract.js';
-import { createWorker } from 'tesseract.js';
+// import { createWorker } from 'tesseract.js';
 
 async function ImgToText(){
     //JSTesseract
@@ -25,12 +25,15 @@ async function ImgToText(){
     await worker.terminate();
     })();
 
-    return text;
+    return "text";
 }
 
 ImgToText();
 
-// function TxtToSpeech()
+function TxtToSpeech(){
 var msg = new SpeechSynthesisUtterance();
 msg.text = ImgToText();
 window.speechSynthesis.speak(msg);
+}
+
+TxtToSpeech();
