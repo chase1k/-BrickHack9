@@ -1,5 +1,7 @@
-import ImageProcessor from BRICKHACK9;
+import { ImgToTxt } from './ImageProcessor';
+
+text = console.log(ImgToTxt);
 
 var msg = new SpeechSynthesisUtterance();
-msg.text = ImageProcessor.imgToText();
+msg.text = text;
 window.speechSynthesis.speak(msg);
