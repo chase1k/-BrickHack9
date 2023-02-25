@@ -47,30 +47,62 @@
         
             <div class="settingsButtons">
 
-                <div class="settingsButton fontType" > <!--search tab completion dropbar-->
+                <div class="settingsButton fontType" > <!--dropbar-->
                     <h2>Font Type:</h2>
+                    <select name="fonts" id="font-select">
+                        <option value="">--Please choose your preffered font--</option>
+                        <option value="lexend">Lexend (Recommended)</option>
+                        <option value="arial">Arial</option>
+                        <option value="sansserif">Sans Serif</option>
+                        <option value="timesnewroman">Times New Roman</option>
+                        <option value="helvetica">Helvetica</option>
+                        <option value="verdana">Verdana</option>
+                        <option value="garamond">Garamond</option>
+                    </select>
                 </div>
 
-                <div class="settingsButton fontSize" > <!--search tab completion dropbar-->
+                <div class="settingsButton fontSize" > <!--like google docs    [-][num][+] with text input and dropbar-->
                     <h2>Font Size:</h2>
                 </div>
 
-                <div class="settingsButton spacing" > <!--search tab completion dropbar-->
-                    <h2>Spacing:</h2>
+                <div class="settingsButton spacingLines" > <!--dropbar-->
+                    <h2>Spacing (lines):</h2>
+                    <select name="spacingLines" id="spacingLines-select">
+                        <option value="">--Please choose your preffered line spacing--</option>
+                        <option value="1">Normal</option>
+                        <option value="1.15">1.15</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                    </select>
                 </div>
 
-                <div class="settingsButton contrast" > <!--search tab completion dropbar-->
-                    <h2>Contrast:</h2>
+                <div class="settingsButton spacingWords" > <!--dropbar-->
+                    <h2>Spacing (words):</h2>
+                    <select name="spacingWords" id="spacingWords-select">
+                        <option value="">--Please choose your preffered word spacing--</option>
+                        <option value="1">single</option>
+                        <option value="2">double</option>
+                        <option value="3">triple</option>
+                        <option value="4">quadruple</option>
+                    </select>
                 </div>
 
-                <div class="settingsButton synonyms" > <!--switch-->
+                <div class="settingsButton contrast" > <!--checkbox-->
                     <h2>Contrast:</h2>
                     <!--info button-->
+                    <input type="checkbox" id="contrastCheck" onclick="updateSettings()">
                 </div>
 
-                <div class="settingsButton summary" > <!--switch-->
-                    <h2>Contrast:</h2>
+                <div class="settingsButton synonyms" > <!--checkbox-->
+                    <h2>Synonyms:</h2>
                     <!--info button-->
+                    <input type="checkbox" id="synonymsCheck" onclick="updateSettings()">
+                </div>
+
+                <div class="settingsButton summary" > <!--checkbox-->
+                    <h2>Summary:</h2>
+                    <!--info button-->
+                    <input type="checkbox" id="summaryCheck" onclick="updateSettings()">
                 </div>
 
             </div>
