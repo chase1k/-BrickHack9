@@ -11,6 +11,7 @@ h1 {
 h2 {
     font-family: 'Lexend Deca';
     font-size: 20px;
+    margin: 0px;
 }
 
 p {
@@ -18,7 +19,18 @@ p {
     font-size: 15px;
 }
 
-#settingsButton {
+.settingsButton {
     display: flex;
     flex-direction: row;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    width: 100px;
+    height: 100px;
 }
