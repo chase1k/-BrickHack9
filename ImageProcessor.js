@@ -11,7 +11,12 @@ function ImgToText(){
     // console.log(text);
     // })
 
-    return "text";
+    return "gabriel is smell, yuck yuck";
 }
 
 ImgToText();
+
+// function TxtToSpeech()
+var msg = new SpeechSynthesisUtterance();
+msg.text = ImgToText();
+window.speechSynthesis.speak(msg);
