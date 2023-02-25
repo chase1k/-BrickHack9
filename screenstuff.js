@@ -1,9 +1,7 @@
-var el = document.getElementById("screenshot");
-if(el){
-  el.addEventListener("click", screenshot);
-}
+document.getElementById("screenshot").addEventListener("click", screenshot);
 
 function screenshot() {
+    alert("hello");
     //chrome.tabs.captureVisibleTab(null, {}, function (image) {
 //     var img = new Image();
 //     img.onload = function() {
@@ -25,15 +23,41 @@ document.getElementById("wholePage").addEventListener("click", wholePage);
 //   el.addEventListener("click", wholePage);
 // }
 function wholePage() {
-    let capturing = chrome.tabs.captureVisibleTab();
+    let capturing = chrome.tabs.captureVisibleTab(null, function(img) {
+        var xhr = new XMLHttpRequest(), formData = new FormData();  
+        formData.append("img", img);
+        xhr.open("POST", "http://myserver.com/submitImage", true);
+        xhr.send(formData);
+    });
     capturing.then(onCaptured, onError);
-    console.log("done");
+    alert("done");
+    
 }
 
 function onCaptured(imageUri) {
-    console.log(imageUri);
+    alert(imageUri)
+    // convertURIToImageData(imageUri).then(function(imageData) {
+    //     // Here you can use imageData
+    //     alert(imageData);
+    //   });
 }
   
 function onError(error) {
     console.log(`Error: ${error}`);
 }
+
+function convertURIToImageData(URI) {
+    return new Promise(function(resolve, reject) {
+      if (URI == null) return reject();
+      var canvas = document.createElement('canvas'),
+          context = canvas.getContext('2d'),
+          image = new Image();
+      image.addEventListener('load', function() {
+        canvas.width = image.width;
+        canvas.height = image.height;
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+        resolve(context.getImageData(0, 0, canvas.width, canvas.height));
+      }, false);
+      image.src = URI;
+    });
+  }
