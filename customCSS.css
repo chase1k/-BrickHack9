@@ -22,6 +22,14 @@ p {
 .settingsButton {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+form > input{
+    padding: 3px;
+    margin: 5px;
+    justify-content: right;
 }
 
 .buttons {
