@@ -6,7 +6,3 @@ function updateSettings() {
     // do shit with that
     
 }
-  
-  
-
-
