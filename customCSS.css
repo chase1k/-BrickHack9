@@ -12,6 +12,7 @@ h2 {
     font-family: 'Lexend Deca';
     font-size: 20px;
     margin: 0px;
+    font-weight: normal;
 }
 
 p {
@@ -22,6 +23,13 @@ p {
 .settingsButton {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+form > input{
+    padding: 3px;
+    margin: 5px;
 }
 
 .buttons {
