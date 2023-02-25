@@ -47,7 +47,7 @@
         
             <div class="settingsButtons">
 
-                <div class="settingsButton fontType" > <!--dropbar-->
+                <form>
                     <h2>Font Type:</h2>
                     <select name="fonts" id="font-select">
                         <!-- <option value="">--Please choose your preffered font--</option> -->
@@ -59,14 +59,10 @@
                         <option value="verdana">Verdana</option>
                         <option value="garamond">Garamond</option>
                     </select>
-                </div>
 
-                <div class="settingsButton fontSize" > <!--like google docs    [-][num][+] with text input and dropbar-->
                     <h2>Font Size:</h2>
-                </div>
 
-                <div class="settingsButton spacingLines" > <!--dropbar-->
-                    <h2>Spacing (lines):</h2>
+                    <h2>Spacing (lines):</h2> <!--dropbar-->
                     <select name="spacingLines" id="spacingLines-select">
                         <option value="">--Please choose your preffered line spacing--</option>
                         <option value="1">Normal</option>
@@ -74,10 +70,8 @@
                         <option value="1.5">1.5</option>
                         <option value="2">2</option>
                     </select>
-                </div>
 
-                <div class="settingsButton spacingWords" > <!--dropbar-->
-                    <h2>Spacing (words):</h2>
+                    <h2>Spacing (words):</h2> <!--dropbar-->
                     <select name="spacingWords" id="spacingWords-select">
                         <option value="">--Please choose your preffered word spacing--</option>
                         <option value="1">single</option>
@@ -85,25 +79,21 @@
                         <option value="3">triple</option>
                         <option value="4">quadruple</option>
                     </select>
-                </div>
 
-                <div class="settingsButton contrast" > <!--checkbox-->
-                    <h2>Contrast:</h2>
+                    <h2>Contrast:</h2> <!--checkbox-->
                     <!--info button-->
                     <input type="checkbox" id="contrastCheck" onclick="updateSettings()">
-                </div>
 
-                <div class="settingsButton synonyms" > <!--checkbox-->
-                    <h2>Synonyms:</h2>
+                    <h2>Synonyms:</h2> <!--checkbox-->
                     <!--info button-->
                     <input type="checkbox" id="synonymsCheck" onclick="updateSettings()">
-                </div>
 
-                <div class="settingsButton summary" > <!--checkbox-->
-                    <h2>Summary:</h2>
+                    <h2>Summary:</h2> <!--checkbox-->
                     <!--info button-->
                     <input type="checkbox" id="summaryCheck" onclick="updateSettings()">
-                </div>
+
+                    <input type="submit">
+                </form>
 
             </div>
         </div>
