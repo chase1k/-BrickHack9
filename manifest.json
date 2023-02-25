@@ -13,7 +13,7 @@
     "action": {
 
         "default_popup": "main.html",
-        "default_icon": "hello_extensions.png",
+        "default_icon": "logo.png",
 
         "display_settings": "settings.html",
         "display_text": "display_text"
