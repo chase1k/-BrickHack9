@@ -1,7 +1,21 @@
-import { ImgToTxt } from './ImageProcessor';
+function ImgToText(){
+    //JSTesseract
+    
+    // Tesseract.recognize(
+    // 'https://tesseract.projectnaptha.com/img/eng_bw.png',
+    // 'eng',
+    // { logger: m => console.log(m) }
+    // ).then(({ data: { text } }) => {
+    // console.log(text);
+    // })
 
-text = console.log(ImgToTxt);
+    return "text, hello, text";
+}
 
+ImgToText();
+
+// function TxtToSpeech()
 var msg = new SpeechSynthesisUtterance();
-msg.text = text;
+msg.text = ImgToText();
 window.speechSynthesis.speak(msg);
+
