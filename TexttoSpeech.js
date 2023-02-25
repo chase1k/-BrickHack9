@@ -9,7 +9,7 @@ function ImgToText(){
     // console.log(text);
     // })
 
-    return "text, hello, text";
+    return "gabriel is smell, yuck yuck";
 }
 
 ImgToText();
