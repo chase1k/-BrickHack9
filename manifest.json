@@ -7,16 +7,13 @@
     "version": "1.0",
     
     "manifest_version": 3,
-
-    "background": {
-
-        "service_worker": "background.js"
-        
-    },
         
     "permissions": ["storage"],
 
     "action": {
+
+        "default_popup": "main.html",
+        "default_icon": "hello_extensions.png",
 
         "display_settings": "settings.html",
         "display_text": "display_text"
