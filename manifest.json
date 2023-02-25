@@ -8,8 +8,8 @@
     
     "manifest_version": 3,
         
-    "permissions": ["storage"],
-
+    "permissions": ["storage", "activeTab"],
+ 
     "action": {
 
         "default_popup": "main.html",
