@@ -1,1 +1,11 @@
-//stuff
+{
+
+    "name": "EZ-Read",
+    
+    "description": "Chrome Extension that helps the reading imparied",
+    
+    "version": "1.0",
+    
+    "manifest_version": 3
+    
+}
