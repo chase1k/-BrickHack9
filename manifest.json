@@ -15,7 +15,7 @@
     "action": {
 
         "default_popup": "main.html",
-        "default_icon": "tempLogo.svg",
+        "default_icon": "tempLogo.png",
 
         "display_settings": "settings.html",
         "display_text": "display_text"
