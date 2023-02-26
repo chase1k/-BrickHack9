@@ -42,10 +42,18 @@ function updateSettings() {
 function getStyleText() {
     const styling = "style=\"";
 
-    styling += "font-family: '" + localStorage["font"] + "'; ";
-    styling += "font-size: " + localStorage["fontSize"] + "px; ";
-    styling += "line-height: " + localStorage["spacingLines"] + "; ";
-    styling += "word-spacing: " + 3*localStorage["spacingWords"] + "px; ";
+    if (localStorage["font"] != undefined) {
+        styling += "font-family: '" + localStorage["font"] + "'; ";
+    }
+    if (localStorage["fontSize"] != undefined) {
+        styling += "font-size: " + localStorage["fontSize"] + "px; ";
+    }
+    if (localStorage["spacingLines"] != undefined) {
+        styling += "line-height: " + localStorage["spacingLines"] + "; ";
+    }
+    if (localStorage["spacingWords"] != undefined) {
+        styling += "word-spacing: " + 3*localStorage["spacingWords"] + "px; ";
+    }
 
     if (localStorage["contrast"].checked == true){
         styling += "background-color: white; ";
