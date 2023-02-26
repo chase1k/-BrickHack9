@@ -25,14 +25,17 @@ async function ImgToText(){
     await worker.terminate();
     })();
 
-    return "text";
+    // var ProcessedText = "text"
+    // return ProcessedText;
+    ProcessedText = "text";
 }
-
 ImgToText();
 
 function TxtToSpeech(){
+ImgToText();
+
 var msg = new SpeechSynthesisUtterance();
-msg.text = ImgToText();
+msg.text = ProcessedText;
 window.speechSynthesis.speak(msg);
 }
 
