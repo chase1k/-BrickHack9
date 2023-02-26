@@ -4,7 +4,7 @@
 // import * as np from 'numpy';
 // import { Image } from 'PIL';
 
-var ProcessedText = "achoo"
+var ProcessedText = "erm? what the scallop?"
 async function ImgToText(){
     //JSTesseract
         
