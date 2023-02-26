@@ -1,7 +1,7 @@
 body {
     padding: 5px;
     /* background-color: rgb(248, 240, 227); */
-    background-image: url("backgroundTileSmall.png");
+    background-image: url("images/backgroundTileSmall.png");
     background-repeat: repeat;
 }
 
@@ -48,11 +48,11 @@ button {
 }
 
 .screenshot {
-    background-image: url("screenshotButton.svg");
+    background-image: url("images/screenshotButton.svg");
 }
 
 .wholePage {
-    background-image: url("wholePageButton.svg");
+    background-image: url("images/wholePageButton.svg");
 }
 
 .translatedText {
