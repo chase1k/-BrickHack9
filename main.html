@@ -8,11 +8,11 @@
         <script type='module' src='https://unpkg.com/tesseract.js@4.0.2/dist/tesseract.min.js'></script>
         <script src="main.js"></script>
         <script src="ImageProcessor.js"></script>
-        <script src="TexttoSpeech.js"></script>
+        <!-- <script src="TexttoSpeech.js"></script> -->
         <style>
             body {
                 height: 500px; /* popovers have a max height of 600px */
-                width: 400px;
+                width: 370px;
             }
         </style>
     </head>
@@ -21,18 +21,18 @@
         <div class="main">
             <h1>EZ-Read</h1>
             <p>
-                Chrome Extension that helps the reading impaired more easily 
+                Chrome Extension that helps the reading imparied more easily 
                 surf the internet by making an individualized ultra-readable 
                 version of any text they want and displaying it over the problem area.
             </p>
         
             <div class="buttons">
                 <button class="screenshot" id="screenshot">
-                    <img src="screenshotbutton.png" alt="EZ-readify selected area">
+                    <!-- <img src="screenshotButton.svg" alt="EZ-readify selected area"> -->
                 </button>
                 
                 <button class="wholePage" id="wholePage">
-                    <img src="wholePage.png" alt="EZ-readify whole page">
+                    <!-- <img src="wholePageButton.svg" alt="EZ-readify whole page"> -->
                 </button>
                 <script src="screenstuff.js"></script>
             </div>
@@ -52,7 +52,7 @@
                 <form>
                     <div class="settingsButton fontType" > <!--dropbar-->
                         <h2>Font Type:</h2>
-                        <select name="fonts" id="font-select">
+                        <select name="fonts" id="font-select" onchange="updateSettings()">
                             <option value="Lexend Deca">Lexend (Recommended)</option>
                             <option value="arial">Arial</option>
                             <option value="sansserif">Sans Serif</option>
@@ -65,7 +65,7 @@
 
                     <div class="settingsButton fontSize" > <!--like google docs    [-][num][+] with text input and dropbar-->
                         <h2>Font Size:</h2>
-                        <select name="fontSize" id="fontSize-select">
+                        <select name="fontSize" id="fontSize-select" onchange="updateSettings()">
                             <option value="12">12</option>
                             <option value="13">13</option>
                             <option value="14">14</option>
@@ -100,49 +100,54 @@
 
                     <div class="settingsButton spacingLines" > <!--dropbar-->
                         <h2>Spacing (lines):</h2>
-                        <select name="spacingLines" id="spacingLines-select">
+                        <select name="spacingLines" id="spacingLines-select" onchange="updateSettings()">
                             <option value="1">Normal</option>
                             <option value="1.15">1.15</option>
                             <option value="1.5">1.5</option>
                             <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                            <option value="3">3</option>
                         </select>
                     </div>
 
                     <div class="settingsButton spacingWords" > <!--dropbar-->
                         <h2>Spacing (words):</h2>
-                        <select name="spacingWords" id="spacingWords-select">
+                        <select name="spacingWords" id="spacingWords-select" onchange="updateSettings()">
                             <option value="1">single</option>
                             <option value="2">double</option>
                             <option value="3">triple</option>
                             <option value="4">quadruple</option>
+                            <option value="5">quintuple</option>
                         </select>
                     </div>
 
-                    <div class="settingsButton contrast" > <!--checkbox-->
+                    <div class="settingsButton contrast" > <!-- checkbox -->
                         <h2>Contrast:</h2>
-                        <!--info button-->
-                        <input type="checkbox" id="contrastCheck" onclick="updateSettings()">
+                        <!-- info button -->
+                        <input type="checkbox" id="contrast-check" onclick="updateSettings()">
                     </div>
 
-                    <div class="settingsButton synonyms" > <!--checkbox-->
-                        <h2>Synonyms:</h2>
-                        <!--info button-->
-                        <input type="checkbox" id="synonymsCheck" onclick="updateSettings()">
-                    </div>
+                    <!--
 
-                    <div class="settingsButton summary" > <!--checkbox-->
-                        <h2>Summary:</h2>
-                        <!--info button-->
-                        <input type="checkbox" id="summaryCheck" onclick="updateSettings()">
-                    </div>
+                        <div class="settingsButton synonyms" > ##comment## checkbox ##comment## 
+                            <h2>Synonyms:</h2>
+                             ##comment## info button ##comment## 
+                            <input type="checkbox" id="synonyms-check" onclick="updateSettings()">
+                        </div>
+
+                        <div class="settingsButton summary" >  ##comment## checkbox ##comment## 
+                            <h2>Summary:</h2>
+                             ##comment## info button ##comment## 
+                            <input type="checkbox" id="summary-check" onclick="updateSettings()">
+                        </div>
+
+                    -->
 
                     <div class="settingsButton tts" > <!--checkbox-->
                         <h2>Text to Speech:</h2>
                         <!--info button-->
-                        <input type="checkbox" id="ttsCheck" onclick="updateSettings()">
+                        <input type="checkbox" id="tts-check" onclick="updateSettings()">
                     </div>
-
-                    <input type="submit">
 
                 </div>
             </form>
