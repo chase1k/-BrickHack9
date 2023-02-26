@@ -43,12 +43,8 @@ async function ImgToText(){
 
 }
 
-function TxtToSpeech(){
-ImgToText();
-
-var msg = new SpeechSynthesisUtterance();
-msg.text = ProcessedText;
-window.speechSynthesis.speak(msg);
+function TxtToSpeech(text){
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = text;
+    window.speechSynthesis.speak(msg);
 }
-
-TxtToSpeech();
