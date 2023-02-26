@@ -68,8 +68,8 @@ function getStyleText() {
     return styling;
 }
 
-function displayText_Screenshot(xcor,ycor,inputText) {
-    const final = "<p ";
+function displayText(inputText) {
+    const final = "<p class=\"translatedText\"";
     const styling = getStyleText();
     const text = inputText;
 
