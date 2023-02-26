@@ -68,6 +68,12 @@ function getStyleText() {
     return styling;
 }
 
+function TxtToSpeech(text){
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = text;
+    window.speechSynthesis.speak(msg);
+}
+
 function displayText(inputText) {
     // const final = "<div id=\"ChromeExtension:Color-Pick.com\" style=\"position: fixed; min-width: 200px; max-width: 80%; min-height: 200px; max-height: 80%; cursor: default; padding: 4px;\">";
     const finalText = "<p class=\"translatedText\"";

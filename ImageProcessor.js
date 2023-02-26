@@ -42,9 +42,3 @@ async function ImgToText(){
     let ProcessedText = "text";
 
 }
-
-function TxtToSpeech(text){
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = text;
-    window.speechSynthesis.speak(msg);
-}
