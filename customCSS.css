@@ -44,4 +44,13 @@ form > input{
 button {
     width: 100px;
     height: 100px;
+    border-radius: 50px;
+}
+
+.screenshot {
+    background-image: url("screenshotButton.svg");
+}
+
+.wholePage {
+    background-image: url("wholePageButton.svg");
 }
