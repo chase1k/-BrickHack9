@@ -1,3 +1,12 @@
+document.getElementById("font-select").addEventListener("click", updateSettings);
+document.getElementById("fontSize-select").addEventListener("click", updateSettings);
+document.getElementById("spacingLines-select").addEventListener("click", updateSettings);
+document.getElementById("spacingWords-select").addEventListener("click", updateSettings);
+document.getElementById("contrast-check").addEventListener("click", updateSettings);
+document.getElementById("synonyms-check").addEventListener("click", updateSettings);
+document.getElementById("summary-check").addEventListener("click", updateSettings);
+document.getElementById("tts-check").addEventListener("click", updateSettings);
+
 function updateSettings() {
     console.log("HI");
 
@@ -68,17 +77,16 @@ function getStyleText() {
     return styling;
 }
 
-function TxtToSpeech(text){
+function TxtToSpeech(words){
     var msg = new SpeechSynthesisUtterance();
-    msg.text = text;
+    msg.text = words;
     window.speechSynthesis.speak(msg);
 }
 
-function displayText(inputText) {
-    // const final = "<div id=\"ChromeExtension:Color-Pick.com\" style=\"position: fixed; min-width: 200px; max-width: 80%; min-height: 200px; max-height: 80%; cursor: default; padding: 4px;\">";
+function displayText(input) {
     const finalText = "<p class=\"translatedText\"";
     const styling = getStyleText();
-    const text = inputText;
+    const text = input;
 
     // if (localStorage["synonyms"].checked == true){
     //     //text = <function that changes synonyms>(text);
@@ -97,5 +105,12 @@ function displayText(inputText) {
 
     // final += finalText + "</div>";
 
-    // .insertAdjacentHTML("afterend", final);
+
+    // const subject = document.getElementById("buttons"); // where we print after
+    
+    alert("I am an alert box!");
+
+    insertAdjacentHTML(afterend,displayText("inserted text"));
 }
+
+document.getElementById("testButton").addEventListener("click", alert("I am an alert box!"));

@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="customCSS.css">
         <link rel="stylesheet" href="importedCSS.css">
         <script type='module' src='https://unpkg.com/tesseract.js@4.0.2/dist/tesseract.min.js'></script>
-        <script src="main.js"></script>
         <script src="ImageProcessor.js"></script>
         <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
@@ -29,15 +28,14 @@
             </p>
         
             <div class="buttons">
-                <button class="screenshot" id="screenshot" title="Translate selected area">
-                    <!-- <img src="screenshotButton.svg" alt="EZ-readify selected area"> -->
-                </button>
+                <button class="screenshot" id="screenshot" title="Translate selected area"></button>
                 
-                <button class="wholePage" id="wholePage" title="Translate entire page">
-                    <!-- <img src="wholePageButton.svg" alt="EZ-readify whole page"> -->
-                </button>
+                <button class="wholePage" id="wholePage" title="Translate entire page"></button>
+                
                 <script src="screenstuff.js"></script>
             </div>
+
+            <button class="test" id="testButton" title="tester"></button>
         </div>
 
         <div class="settings">
@@ -54,7 +52,7 @@
                 <form>
                     <div class="settingsButton fontType" > <!--dropbar-->
                         <h2>Font Type:</h2>
-                        <select name="fonts" id="font-select" onchange="updateSettings()">
+                        <select name="fonts" id="font-select" >
                             <option value="Lexend Deca">Lexend (Recommended)</option>
                             <option value="arial">Arial</option>
                             <option value="sansserif">Sans Serif</option>
@@ -67,7 +65,7 @@
 
                     <div class="settingsButton fontSize" > <!--like google docs    [-][num][+] with text input and dropbar-->
                         <h2>Font Size:</h2>
-                        <select name="fontSize" id="fontSize-select" onchange="updateSettings()">
+                        <select name="fontSize" id="fontSize-select" >
                             <option value="12">12</option>
                             <option value="13">13</option>
                             <option value="14">14</option>
@@ -102,7 +100,7 @@
 
                     <div class="settingsButton spacingLines" > <!--dropbar-->
                         <h2>Spacing (lines):</h2>
-                        <select name="spacingLines" id="spacingLines-select" onchange="updateSettings()">
+                        <select name="spacingLines" id="spacingLines-select" >
                             <option value="1">Normal</option>
                             <option value="1.15">1.15</option>
                             <option value="1.5">1.5</option>
@@ -114,7 +112,7 @@
 
                     <div class="settingsButton spacingWords" > <!--dropbar-->
                         <h2>Spacing (words):</h2>
-                        <select name="spacingWords" id="spacingWords-select" onchange="updateSettings()">
+                        <select name="spacingWords" id="spacingWords-select" >
                             <option value="1">single</option>
                             <option value="2">double</option>
                             <option value="3">triple</option>
@@ -126,7 +124,7 @@
                     <div class="settingsButton contrast" > <!-- checkbox -->
                         <h2>Contrast:</h2>
                         <!-- info button -->
-                        <input type="checkbox" id="contrast-check" onclick="updateSettings()">
+                        <input type="checkbox" id="contrast-check" >
                     </div>
 
                     <!--
@@ -134,13 +132,13 @@
                         <div class="settingsButton synonyms" > ##comment## checkbox ##comment## 
                             <h2>Synonyms:</h2>
                              ##comment## info button ##comment## 
-                            <input type="checkbox" id="synonyms-check" onclick="updateSettings()">
+                            <input type="checkbox" id="synonyms-check" >
                         </div>
 
                         <div class="settingsButton summary" >  ##comment## checkbox ##comment## 
                             <h2>Summary:</h2>
                              ##comment## info button ##comment## 
-                            <input type="checkbox" id="summary-check" onclick="updateSettings()">
+                            <input type="checkbox" id="summary-check" >
                         </div>
 
                     -->
@@ -148,13 +146,13 @@
                     <div class="settingsButton tts" > <!--checkbox-->
                         <h2>Text to Speech:</h2>
                         <!--info button-->
-                        <input type="checkbox" id="tts-check" onclick="updateSettings()">
+                        <input type="checkbox" id="tts-check" >
                     </div>
 
                 </div>
             </form>
         </div>
 
-
+        <script src="main.js"></script>
     </body>
 </html>
