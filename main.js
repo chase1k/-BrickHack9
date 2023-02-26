@@ -39,10 +39,8 @@ function updateSettings() {
     // chrome.storage.sync.set({ tts: tts }).then(() => { console.log("tts(sync) is set to " + value); });
 }
 
-function displayText_Screenshot(xcor,ycor,inputText) {
-    const final = "<p ";
+function getStyleText() {
     const styling = "style=\"";
-    const text = inputText;
 
     styling += "font-family: '" + localStorage["font"] + "'; ";
     styling += "font-size: " + localStorage["fontSize"] + "px; ";
@@ -57,6 +55,16 @@ function displayText_Screenshot(xcor,ycor,inputText) {
         styling += "color: black; ";
     }
 
+    styling += "\"";
+
+    return styling;
+}
+
+function displayText_Screenshot(xcor,ycor,inputText) {
+    const final = "<p ";
+    const styling = getStyleText();
+    const text = inputText;
+
     if (localStorage["synonyms"].checked == true){
         //text = <function that changes synonyms>(text);
     }
@@ -70,7 +78,7 @@ function displayText_Screenshot(xcor,ycor,inputText) {
         //figure out tts
     }
 
-    final += styling + "\">" + text + "</p>"
+    final += styling + ">" + text + "</p>"
 
     //write to new page thats floating or whatever
 }
