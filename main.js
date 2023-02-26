@@ -69,7 +69,7 @@ function getStyleText() {
 }
 
 function displayText(inputText) {
-    const final = "<div id=\"ChromeExtension:Color-Pick.com\" style=\"position: fixed; min-width: 200px; max-width: 80%; min-height: 200px; max-height: 80%; cursor: default; padding: 4px;\">";
+    // const final = "<div id=\"ChromeExtension:Color-Pick.com\" style=\"position: fixed; min-width: 200px; max-width: 80%; min-height: 200px; max-height: 80%; cursor: default; padding: 4px;\">";
     const finalText = "<p class=\"translatedText\"";
     const styling = getStyleText();
     const text = inputText;
@@ -89,7 +89,7 @@ function displayText(inputText) {
 
     finalText += styling + ">" + text + "</p>";
 
-    final += finalText + "</div>";
+    // final += finalText + "</div>";
 
-    //write to new page thats floating or whatever
+    // .insertAdjacentHTML("afterend", final);
 }
