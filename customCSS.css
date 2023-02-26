@@ -66,10 +66,10 @@ form > input{
 }
 
 .translatedText {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 18px;
-    line-height: 1.15;
-    word-spacing: 2rem;
-    background-color: white; 
+    font-family: 'Lexend Deca';
+    font-size: 12px;
+    line-height: normal;
+    word-spacing: normal;
+    background-color: rgb(248, 240, 227); 
     color: black;
 }
