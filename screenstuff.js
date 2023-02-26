@@ -114,14 +114,3 @@ async function ImgToText(URI){
     // return ProcessedText;
     ProcessedText = "text";
 }
-ImgToText();
-
-function TxtToSpeech(){
-    ImgToText();
-
-    var msg = new SpeechSynthesisUtterance();
-    msg.text = ProcessedText;
-    window.speechSynthesis.speak(msg);
-}
-
-TxtToSpeech();
