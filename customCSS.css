@@ -55,11 +55,21 @@ form > input{
     background-image: url("images/wholePageButton.svg");
 }
 
+.translatedTextBox {
+    border-style: solid;
+    border-color: orange;
+    border-width: 5px;
+    border-radius: 10px;
+    
+    margin-top: 20px;
+    padding: 15px;
+}
+
 .translatedText {
-    font-family: 'Lexend Deca';
-    font-size: 12px;
-    line-height: normal;
-    word-spacing: normal;
-    background-color: rgb(248, 240, 227); 
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.15;
+    word-spacing: 2rem;
+    background-color: white; 
     color: black;
 }
