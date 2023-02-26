@@ -84,7 +84,7 @@ function displayText(inputText) {
     // }
 
     if (localStorage["tts"].checked == true){
-        //figure out tts
+        TxtToSpeech(text);
     }
 
     finalText += styling + ">" + text + "</p>";
