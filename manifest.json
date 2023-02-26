@@ -11,7 +11,7 @@
     "host_permissions": ["*://*/*"],
 
     "permissions": ["storage", "activeTab"],
- 
+
     "action": {
 
         "default_popup": "main.html",

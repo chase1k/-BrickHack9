@@ -1,5 +1,5 @@
-// import Tesseract from 'tesseract.js';
-// import { createWorker } from 'tesseract.js';
+const { createWorker } = require('tesseract.js');
+
 
 document.getElementById("screenshot").addEventListener("click", screenshot);
 
@@ -97,22 +97,29 @@ async function ImgToText(URI){
     // })
         
 
-    const worker = await createWorker({
-    logger: m => console.log(m)
-    });
+    // const worker = await createWorker({
+    // logger: m => console.log(m)
+    // });
 
-    (async () => {
-    await worker.loadLanguage('eng');
-    await worker.initialize('eng');
-    const { data: { text } } = await worker.recognize(URI);
-    console.log(text);
-    alert(text);
-    await worker.terminate();
-    })();
+    // (async () => {
+    // await worker.loadLanguage('eng');
+    // await worker.initialize('eng');
+    // const { data: { text } } = await worker.recognize(URI);
+    // console.log(text);
+    // alert(text);
+    // await worker.terminate();
+    // })();
 
     // var ProcessedText = "text"
     // return ProcessedText;
-    ProcessedText = "text";
+    Tesseract.recognize(
+        'https://tesseract.projectnaptha.com/img/eng_bw.png',
+        'eng',
+        { logger: m => console.log(m) }
+      ).then(({ data: { text } }) => {
+        console.log(text);
+      })
+    ProcessedText = text;
 }
 ImgToText();
 
