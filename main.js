@@ -1,3 +1,12 @@
+document.getElementById("font-select").addEventListener("click", updateSettings);
+document.getElementById("fontSize-select").addEventListener("click", updateSettings);
+document.getElementById("spacingLines-select").addEventListener("click", updateSettings);
+document.getElementById("spacingWords-select").addEventListener("click", updateSettings);
+document.getElementById("contrast-check").addEventListener("click", updateSettings);
+document.getElementById("synonyms-check").addEventListener("click", updateSettings);
+document.getElementById("summary-check").addEventListener("click", updateSettings);
+document.getElementById("tts-check").addEventListener("click", updateSettings);
+
 function updateSettings() {
     console.log("HI");
 
@@ -9,8 +18,8 @@ function updateSettings() {
 
     // Get the checkboxes
     var contrast = document.getElementById("contrast-check");
-    var synonyms = document.getElementById("synonyms-check");
-    var summary = document.getElementById("summary-check");
+    // var synonyms = document.getElementById("synonyms-check");
+    // var summary = document.getElementById("summary-check");
     var tts = document.getElementById("tts-check");
 
     // do shit with that
@@ -29,10 +38,10 @@ function updateSettings() {
     chrome.storage.local.set({ contrast: contrast }).then(() => { console.log("contrast(local) is set to " + value); });
     // chrome.storage.sync.set({ contrast: contrast }).then(() => { console.log("contrast(sync) is set to " + value); });
     
-    chrome.storage.local.set({ synonyms: synonyms }).then(() => { console.log("synonyms(local) is set to " + value); });
+    // chrome.storage.local.set({ synonyms: synonyms }).then(() => { console.log("synonyms(local) is set to " + value); });
     // chrome.storage.sync.set({ synonyms: synonyms }).then(() => { console.log("synonyms(sync) is set to " + value); });
     
-    chrome.storage.local.set({ summary: summary }).then(() => { console.log("summary(local) is set to " + value); });
+    // chrome.storage.local.set({ summary: summary }).then(() => { console.log("summary(local) is set to " + value); });
     // chrome.storage.sync.set({ summary: summary }).then(() => { console.log("summary(sync) is set to " + value); });
     
     chrome.storage.local.set({ tts: tts }).then(() => { console.log("tts(local) is set to " + value); });
@@ -68,28 +77,40 @@ function getStyleText() {
     return styling;
 }
 
-function displayText(inputText) {
-    const final = "<div id=\"ChromeExtension:Color-Pick.com\" style=\"position: fixed; min-width: 200px; max-width: 80%; min-height: 200px; max-height: 80%; cursor: default; padding: 4px;\">";
+function TxtToSpeech(words){
+    var msg = new SpeechSynthesisUtterance();
+    msg.text = words;
+    window.speechSynthesis.speak(msg);
+}
+
+function displayText(input) {
     const finalText = "<p class=\"translatedText\"";
     const styling = getStyleText();
-    const text = inputText;
+    const text = input;
 
-    if (localStorage["synonyms"].checked == true){
-        //text = <function that changes synonyms>(text);
-    }
+    // if (localStorage["synonyms"].checked == true){
+    //     //text = <function that changes synonyms>(text);
+    // }
 
-    if (localStorage["summary"].checked == true){
+    // if (localStorage["summary"].checked == true){
         
-        //text = <function that sumarizes test>(text);
-    }
+    //     //text = <function that sumarizes test>(text);
+    // }
 
     if (localStorage["tts"].checked == true){
-        //figure out tts
+        TxtToSpeech(text);
     }
 
     finalText += styling + ">" + text + "</p>";
 
-    final += finalText + "</div>";
+    // final += finalText + "</div>";
 
-    //write to new page thats floating or whatever
+
+    // const subject = document.getElementById("buttons"); // where we print after
+    
+    alert("I am an alert box!");
+
+    insertAdjacentHTML(afterend,displayText("inserted text"));
 }
+
+document.getElementById("testButton").addEventListener("click", alert("I am an alert box!"));
